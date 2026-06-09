@@ -12,13 +12,12 @@ pipeline {
         TOMCAT_CONTEXT = '/demo-java-war' // The context path your app will run on
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                // Clones the repository specified in your prompt
-                git branch: 'main', url: 'https://github.com/akshaykadam-45/demo-java-war.git'
-            }
-        }
+    stage('Checkout') {
+    steps {
+        // Changed branch from 'main' to 'master'
+        git branch: 'master', url: 'https://github.com/akshaykadam-45/demo-java-war.git'
+    }
+}
 
         stage('Build') {
             steps {
