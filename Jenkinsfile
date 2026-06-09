@@ -8,17 +8,11 @@ pipeline {
 
     environment {
         // URL of your Tomcat Manager text interface
-        TOMCAT_URL = 'http:localhost:8080/manager/text'
+        TOMCAT_URL = 'http://localhost:8080/manager/text'
         TOMCAT_CONTEXT = '/demo-java-war' // The context path your app will run on
     }
 
-    stage('Checkout') {
-    steps {
-        // Changed branch from 'main' to 'master'
-        git branch: 'master', url: 'https://github.com/akshaykadam-45/demo-java-war.git'
-    }
-}
-
+    stages {
         stage('Build') {
             steps {
                 // Compiles code, runs tests, and packages the application into a .war file
