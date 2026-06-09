@@ -1,11 +1,14 @@
 pipeline {
     agent any
 
-
+    tools {
+        // Must match the name defined in Manage Jenkins -> Tools
+        maven 'Maven_3' 
+    }
 
     environment {
         // URL of your Tomcat Manager text interface
-        TOMCAT_URL = 'http://localhost:8080/manager/text'
+        TOMCAT_URL = 'http:localhost:8080/manager/text'
         TOMCAT_CONTEXT = '/demo-java-war' // The context path your app will run on
     }
 
