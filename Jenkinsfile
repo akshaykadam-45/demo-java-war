@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Must match the name defined in Manage Jenkins -> Tools
-        maven 'Maven_3' 
+        maven 'maven' 
     }
 
     environment {
