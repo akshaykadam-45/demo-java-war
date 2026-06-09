@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        // Must match the name defined in Manage Jenkins -> Tools
-        maven 'maven' 
-    }
+
 
     environment {
         // URL of your Tomcat Manager text interface
